@@ -18,7 +18,7 @@ async function fetchDatas() {
 
     if (categoriesList.result) {
         categoriesList.result.forEach((element) => {
-            category.innerHTML += `<option value=${element.id_category}>${element.name_category}</option>`
+            category.innerHTML += `<option value=${element.id_animal_category}>${element.name_category}</option>`
         })
     }
 
@@ -45,17 +45,46 @@ async function insertAnimal() {
     let departure = document.querySelector('.departure').value
 
     const formData = new FormData()
-    formData.append('name', name)
-    formData.append('arrival', arrival)
-    formData.append('departure', departure)
-    formData.append('category', category.value)
-    formData.append('client', client.value)
-    formData.append('box', box.value)
+
     formData.append('image', image.files[0])
 
-    const response = await fetch('http://localhost:3111/animal/insert', {
-        method: 'POST',
-        body: formData,
-    })
-    console.log(await response.json())
+    const response = await fetch(
+        'http://localhost:3111/animal/insert/picture',
+        {
+            method: 'POST',
+            body: formData,
+        }
+    )
+    let data = await response.json()
+
+    if (response.status === 200) {
+        let uploadedImage = data.newFileName
+
+        let animal = {
+            name: name,
+            arrival: new Date(arrival),
+            departure: new Date(departure),
+            category: category.value,
+            client: client.value,
+            box: box.value,
+            image: uploadedImage,
+        }
+
+        let request = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json; charset=utf-8',
+            },
+            body: JSON.stringify(animal),
+        }
+
+        const response = await fetch(
+            'http://localhost:3111/animal/insert/',
+            request
+        ).then((res) => {
+            if (res.status === 200) {
+                alert('inserted')
+            }
+        })
+    }
 }
