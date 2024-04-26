@@ -36,3 +36,26 @@ async function fetchDatas() {
 // let categories = await fetch('http://localhost:3111/categories/all')
 
 fetchDatas()
+
+async function insertAnimal() {
+    let image = document.querySelector('.image')
+    let name = document.querySelector('.name').value
+
+    let arrival = document.querySelector('.arrival').value
+    let departure = document.querySelector('.departure').value
+
+    const formData = new FormData()
+    formData.append('name', name)
+    formData.append('arrival', arrival)
+    formData.append('departure', departure)
+    formData.append('category', category.value)
+    formData.append('client', client.value)
+    formData.append('box', box.value)
+    formData.append('image', image.files[0])
+
+    const response = await fetch('http://localhost:3111/animal/insert', {
+        method: 'POST',
+        body: formData,
+    })
+    console.log(await response.json())
+}
