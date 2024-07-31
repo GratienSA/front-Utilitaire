@@ -10,7 +10,7 @@
             <div class="sm:mx-auto sm:w-full sm:max-w-sm">
                 <img
                     class="mx-auto h-10 w-auto rounded-full object-cover w-32 h-32"
-                    src="../../Assets/medias/logo.png"
+                    src="../../Assets/medias/logo_trial (1).png"
                     alt="Your Company"
                 />
                 <h2
@@ -23,6 +23,22 @@
             <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
                 <div class="space-y-6">
                     <div>
+                        <div class="flex items-center justify-between">
+                            <label
+                                class="block text-sm font-medium leading-6 text-gray-900"
+                                >FullName</label
+                            >
+                        </div>
+                        <div class="mt-2">
+                            <input
+                                type="text"
+                                name="FullName"
+                                required
+                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 indent-3 FullName"
+                            />
+                        </div>
+                    </div>
+                    <div>
                         <label
                             for="email"
                             class="block text-sm font-medium leading-6 text-gray-900"
@@ -31,7 +47,7 @@
                         <div class="mt-2">
                             <input
                                 id="email"
-                                name="email"
+                                name="EmailId"
                                 type="email"
                                 autocomplete="email"
                                 required
@@ -43,7 +59,7 @@
                     <div>
                         <div class="flex items-center justify-between">
                             <label
-                                for="password"
+                                for="Password"
                                 class="block text-sm font-medium leading-6 text-gray-900"
                                 >Password</label
                             >
@@ -51,7 +67,7 @@
                         <div class="mt-2">
                             <input
                                 id="password"
-                                name="password"
+                                name="Password"
                                 type="password"
                                 autocomplete="current-password"
                                 required
@@ -59,36 +75,42 @@
                             />
                         </div>
                     </div>
+                   
                     <div>
                         <div class="flex items-center justify-between">
                             <label
                                 class="block text-sm font-medium leading-6 text-gray-900"
-                                >Name</label
+                                >ContactNo</label
                             >
                         </div>
                         <div class="mt-2">
                             <input
                                 type="text"
                                 required
-                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 indent-3 name"
+                                name="ContactNo"
+                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 indent-3 ContactNo"
                             />
                         </div>
                     </div>
+
                     <div>
                         <div class="flex items-center justify-between">
                             <label
                                 class="block text-sm font-medium leading-6 text-gray-900"
-                                >Phone</label
+                                >Dob</label
                             >
                         </div>
                         <div class="mt-2">
                             <input
-                                type="text"
+                                type="date"
                                 required
-                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 indent-3 phone"
+                                name="dob"
+                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 indent-3 dob"
                             />
                         </div>
                     </div>
+
+
                     <div>
                         <div class="flex items-center justify-between">
                             <label
@@ -100,17 +122,48 @@
                             <input
                                 type="text"
                                 required
-                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 indent-3 adress"
+                                name="Address"
+                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 indent-3 Address "
                             />
                         </div>
                     </div>
-
+                    <div>
+                        <div class="flex items-center justify-between">
+                            <label
+                                class="block text-sm font-medium leading-6 text-gray-900"
+                                >City</label
+                            >
+                        </div>
+                        <div class="mt-2">
+                            <input
+                                type="text"
+                                required
+                                name="City"
+                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 indent-3 City"
+                            />
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-between">
+                            <label
+                                class="block text-sm font-medium leading-6 text-gray-900"
+                                >Country</label
+                            >
+                        </div>
+                        <div class="mt-2">
+                            <input
+                                type="text"
+                                required
+                                name="Country"
+                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 indent-3 Country"
+                            />
+                        </div>
+                    </div>
                     <div>
                         <button
                             onclick="handleRegister()"
                             type="submit"
-                            class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                        >
+                            class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                             Sign up
                         </button>
                     </div>
